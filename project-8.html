@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>SOURCED. - Locally Sourced in SA</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F2EFE9;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+        .wrap{
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        /* NAV*/
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+        }
+        .logo{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 24px;
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
+        .logo span{
+            font-size: 11px;
+            letter-spacing: 2px;
+            color: #888;
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+        .nav-links{
+            display: flex;
+            gap: 28px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .btn{
+            background: #1a1a1a;
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+        }
+        .btn:hover{
+            background: #333;
+        }
+        /* HERO */
+        .hero{
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+            padding: 48px 0 64px;
+        }
+        .eyebrow{
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #888;
+            font-weight: 700;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 56px;
+            line-height: 1.05;
+            margin: 16px 0;
+        }
+        h1 em{
+            font-style: italic;
+            font-weight: 400;
+        }
+        .hero p{
+            font-size: 18px;
+            color: #555;
+            max-width: 480px;
+        }
+        .hero-btns{
+            margin-top: 28px;
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .btn-ghost{
+            border: 1px solid #1a1a1a;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .hero-img{
+            width: 100%;
+            height:440px;
+            object-fit: cover;
+            border-radius: 12px;
+            background: #E8DDD0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 22px;
+        }
+        .hero-meta{
+            margin-top: 16px;
+            font-size: 13px;
+            color: #888;
+        }
+        /* TRUST BAR */
+        .trust{
+            display: flex;
+            gap: 32px;
+            justify-content: space-between;
+            border-top: 1px solid #DDD;
+            border-bottom: 1px solid #DDD;
+            padding: 18px 0;
+            font-size: 13px;
+            color: #555;
+            flex-wrap: wrap;
+        }
+        /* EDITIONS */
+        .section{
+            padding: 64px 0;
+        }
+        .section h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+        .section > p{
+            color: #555;
+            max-width: 600px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .card{
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .card-img{
+            height: 200px;
+            background: #E8DDD0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+        }
+        .card-img.green{
+            background: #2E3A2F;
+            color: #fff;
+        }
+        .card-im.terracotta{
+            background: #E8DDD0;
+        }
+        .card-body{
+            padding: 22px;
+        }
+        .card-body h3{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 22px;
+        }
+        .card-body p{
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0 16px;
+        }
+        .price{
+            font-weight: 700;
+        }
+        .tag{
+            font-size: 11px;
+            letter-spacing: 1px;
+            background: #F2EFE9;
+            padding: 5px 8px;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        .signup{
+            background: #1a1a1a;
+            color: #fff;
+            border-radius: 16px;
+            padding: 48px;
+            text-align: center;
+        }
+        .signup h2{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 36px;
+        }
+        .signup p{
+            color:#BBB;
+            max-width: 520px;
+            margin-top: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        form{
+            display: flex;
+            gap: 12px;
+            max-width: 520px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        input{
+            flex: 1;
+            min-width: 260px;
+            padding: 14px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .btn-white{
+            background: #fff;
+            color: #1a1a1a;
+            padding: 14px 24px;
+            border-radius: 6px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        footer{
+            padding: 40px 0 48px;
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+        }
+        footer a{
+            text-decoration: underline;
+        }
+
+
+        @media(max-width:800px){
+            .hero{
+                grid-template-columns: 1fr;
+
+            }
+            h1{
+                font-size: 40px;
+            }
+            .hero-img{
+                height: 300px;
+            }
+            .grid{
+                grid-template-columns: 1fr;
+            }
+            .nav-links{
+                display: none;
+            }
+            .signup{
+                padding: 32px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav>
+            <div class="logo">SOURCED.<span>CAPE TOWN - PRETORIA</span></div>
+            <div class="nav-links">
+                <a href="#editions">Editions</a>
+                <a href="#about">Our Story</a>
+                <a href="#signup">Newsletter</a>
+            </div>
+            <a href="#signup" class="btn">Subscribe</a>
+        </nav>
+
+        <!--HERO-->
+        <div class="hero">
+            <div>
+                <p class="eyebrow">BERLIN EDITION &bull; NOW LIVE</p>
+                <h1>Beautiful homes,<br><em>sourced locally.</em></h1>
+                <p>We find South Africa's best makers - Titch linen, Robin Sprung wallpaper, and more - and bring them to your inbox every month.</p>
+                <div class="hero-btns">
+                    <a href="#editions" class="btn">Shop The Edition &rarr;</a>
+                    <a href="#signup" class="btn-ghost">Get The Newsletter</a>
+
+            </div>
+            <p class="hero-meta">&#9733; 4.9 from 1,200+ readers &nbsp;&bull;&nbsp; Free delivery over R1,500 </p>
+        </div>
+        <div class="hero-img">Berlin Edition - Hero Image</div>
+    </div>
+    <!-- TRUST-->
+    <div class="trust">
+        <span><strong>SA-made</strong> only</span>
+        <span><strong>Payfast</strong> secure checkout</span>
+        <span><strong>The Courier Guy</strong> delivery</span>
+        <span><strong>30-day</strong> returns</span>
+        </div>
+
+        <!--EDITIONS-->
+        <div class="section" id="editions">
+            <h2>This month's editions</h2>
+            <p>Every edition is curated, tested, and sourced from a real SA maker. No dropshipping. No mass imports.</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-img terracotta">Titch Linen</div>
+                   <div class="card-body">
+                    <span class="tag">BESTSELLER</span>
+                    <h3 style="margin-top: 10px;">Titch Linen Bedding</h3>
+                    <p>Terracotta, double. Stonewashed, breathable, made in Cape Town.</p>
+                    <p><span class="price">R2,450</span>&nbsp; <a href="#" style="text-decoration: underline;font-weight: 700;">View&rarr;</a></p>
+                    </div> 
+                    </div>
+                    <div class="card">
+                        <div class="card-img">Newsletter</div>
+                        <div class="card-body">
+                            <span class="tag">FREE</span>
+                            <h3 style="margin-top: 10px;">The Berlin Edition</h3>
+                            <p>The full story behind this month's makers, in your inbox.</p>
+                            <p><span class="price">Free</span> &nbsp; <a href="#signup" style="text-decoration: underline;font-weight: 700;">Read &rarr;</a></p>
+                            </div>
+                        </div>
+                </div>
+            
+            </div>
+
+            <!-- SIGNUP-->
+
+            <div class="signup" id="signup">
+                <h2>Get SOURCED. in your inbox</h2>
+                <p>One beautiful email a month. New makers, early access, and R150 off your first order. No spam.</p>
+                <form>
+                    <input type="email" placeholder="your@email.co.za" required>
+                    <button class="btn-white" type="submit">Subscribe &rarr;</button>
+                    </form>
+                    <p style="font-size: 12px; margin-top: 14px;color: #888;">Join 1,200+ SA readers. Unsubscribe anytime.</p>
+                </div>
+
+                <footer>
+                    SOURCED. - Coded by Nikita Mampofu - Portfolio Piece 05<br>
+                    <a href=""https://maniki10.github.io/sourced-berlin-edition/>View Newsletter Email</a> &bull; <a href="https://maniki10.github.io/confirmation-order-email/">View Order Email</a> &bull; <a href="https://maniki10.github.io/abandoned-cart/">View Abandoned Cart</a><br><br>
+                    Built with HTML + CSS + Responsive &bull; No framework
+                    </footer>
+</body>
+</html>
